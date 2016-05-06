@@ -24,12 +24,12 @@ public class Service {
 	public static final Object COMMAND_DELETE_ALL = "DELETE ALL";
 	
 	public static String getDesktopPath() {
-		 if (System.getProperty("os.name").toLowerCase().indexOf("win")<0) {
-	            System.err.println("Sorry, Windows only!");
-	            return "";
-	        }
-		 
-		 return System.getProperty("user.home")+"\\Desktop";
+		return System.getProperty("java.io.tmpdir");
+//		if (System.getProperty("os.name").toLowerCase().indexOf("win")<0) {
+//			System.err.println("Sorry, Windows only!");
+//			return "";
+//		}
+//		return System.getProperty("user.home")+"\\Desktop";
 	}
 	
 	public static List<String> getListOfStringBySplitter(String string, String splitter) {
@@ -70,11 +70,11 @@ public class Service {
 		
 		System.out.println("Create DB: CREATE DATABASE DATABASE_NAME");
 		System.out.println("Connect to DB: CONNECT DATABASE_NAME");
-		System.out.println("Create table: CREATE TABLE TABLE_NAME (INT NUMBER, STRING NAME)");
+		System.out.println("Create table: CREATE TABLE TABLE_NAME (INT COLUMN_NAME1, STRING COLUMN_NAME2)");
 		System.out.println("Rename table: RENAME TABLE TABLE_NAME INTO ANOTHER_TABLE");
-		System.out.println("Rename table: INSERT INTO TABLE_NAME VALUES (1, CHECK)");
-		System.out.println("Rename table: SELECT * FROM TABLE_NAME");
-		System.out.println("Rename table: DELETE ALL FROM TABLE_NAME");
+		System.out.println("Insert row: INSERT INTO TABLE_NAME VALUES (1, CHECK)");
+		System.out.println("Select rows: SELECT * FROM TABLE_NAME");
+		System.out.println("Delete all rows: DELETE ALL FROM TABLE_NAME");
 		System.out.println("Exit: 'exit'");
 		
 		System.out.println("----------------------------");

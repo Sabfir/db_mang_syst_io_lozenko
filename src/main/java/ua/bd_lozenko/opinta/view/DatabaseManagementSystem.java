@@ -95,7 +95,7 @@ public class DatabaseManagementSystem {
 		if (!Files.exists(path)) {
             try {
                 Files.createDirectories(path);
-                System.out.println("DB " + databaseName + " created successfully");
+                System.out.println("DB " + databaseName + " created successfully. Path: " + fullpathOfDatabase);
             } catch (IOException e) {
                 throw new MyDBException("Error while creating a DB. Path: " + path.toString(), e);
             }
